@@ -1,1 +1,1 @@
-This is a Case Management Refrence Guide Application
+This is a Case Management Reference Guide Application.

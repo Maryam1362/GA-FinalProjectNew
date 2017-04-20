@@ -1,0 +1,26 @@
+{
+  "name": "case_managment_reference",
+  "version": "1.0.0",
+  "description": "This is a Case Management Reference Guide Application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maryam1362/GA-FinalProjectNew.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maryam1362/GA-FinalProjectNew/issues"
+  },
+  "homepage": "https://github.com/Maryam1362/GA-FinalProjectNew#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  },
+  "devDependencies": {
+    "bootstrap-css": "^4.0.0-alpha.5",
+    "nodemon": "^1.11.0"
+  }
+}

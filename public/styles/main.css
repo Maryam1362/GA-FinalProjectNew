@@ -1,0 +1,16 @@
+h2, label{
+ color:#0086b3;
+}
+
+label{
+	font-size:23px;
+	width:30%;
+}
+input,select{
+	width:25%;
+	height:40px;
+}
+
+.info_section{
+	height:60px;
+}
