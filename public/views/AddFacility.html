@@ -1,0 +1,139 @@
+<!Doctype>
+<html>
+<head>
+
+	<title></title>
+
+  <link href="../styles/main.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+
+  <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+  <!-- Navbar content -->
+  <ul>
+    <li>Home</li>
+    <li>Add Facility</li>
+    <li> Search for Facility</li>
+  </ul>
+
+</nav>
+
+  </header> 
+  <div style="margin-top:30px; width:90%; margin:0 auto;">
+    <h2> Case Mangement Reference Guide</h2>
+    <div class="info_section">
+    <label style="display:inline-block;font-size:17px;">Please select the Payer</label>
+    <select name="select" style="margin-top:10px;">
+      <option value="Medicare"> Medicare </option> 
+      <option value="Medicaid" selected>Medicaid</option>
+      <option value="Aetna">Aetna</option>
+      <option value="Anthem">Anthem</option>
+      <option value="BDBS">BDBS</option>
+      <option value="Carefirst">Carefirst</option>
+      <option value="Cigna">Cigna</option>
+      <option value="Humana">Humana</option>
+      <option value="Innovation health">Innovation health</option>
+      <option value="Kaiser"> Kaiser</option>
+      <option value="Tricare">Tricare</option>
+      <option value="United">United </option>
+      <option value="Medicaid Pending">Medicaid Pending</option>
+    </select>
+  </div>
+  <div class="info_section">
+    <label style="display:inline-block;font-size:17px;">Please select the Adminssions</label>
+    <select name="select" style="margin-top:10px;">
+      <option value="Medicare"> Admit 24/h </option> 
+      <option value="Medicaid" selected>Admit from ER</option>
+      <option value="Aetna">Admit prior to auth</option>
+      <option value="Anthem">Epic Care Link</option>
+    </select>
+  </div>
+  <div class="info_section">
+    <label for ="Paitent_weight" style="display:inline-block;font-size:17px;">Please Enter Patient Weight</label>
+    <input name="Paitent_weight" placeholder="Weight Limit">
+  </div>
+   <div class="info_section">
+    <label for ="memoryCare_unit" style="display:inline-block;font-size:17px;">Please Enter number of secured memory care unit</label>
+    <input name="memoryCare_unit" placeholder="care units">
+  </div>
+  
+  <div class="info_section">
+    <label style="display:inline-block;font-size:17px;">Select Bed type</label>
+  
+   <select name="select" style="margin-top:10px;">
+      <option value="Specialty Beds/Mattresses "> Specialty Beds/Mattresses  </option> 
+      <option value="Contact isolation beds" selected>Contact isolation beds</option>
+      <option value="IP Hospice Beds">IP Hospice Beds</option>
+    </select>
+
+  </div>
+
+    <div class="info_section">
+    <label style="display:inline-block;font-size:17px;">Please select the Contracts type</label>
+    <select name="select" style="margin-top:10px;">
+      <option value="SCM"> SCM </option> 
+      <option value="Bundle" selected>Bundle</option>
+    </select>
+  </div>
+  <div class="info_section">
+    <label style="display:inline-block;font-size:17px;">Please select the Days/wk with MD</label>
+    <select name="select" style="margin-top:10px;">
+      <option value="2"> 2 </option> 
+      <option value="3"> 3 </option> 
+      <option value="4"> 4 </option>
+      <option value="4="> 4+ </option>  
+      <option value="4-5"> 1-5 </option> 
+      <option value="3-5"> 3-5 </option> 
+      <option value="4-5"> 4-5 </option> 
+      <option value="5-6"> 5-6 </option> 
+      <option value="6-7"> 6-7 </option> 
+      <option value="5"> 5 </option> 
+      <option value="6"> 6 </option> 
+      <option value="7"> 7 </option> 
+      <option value="PRN"> PRN </option> 
+    </select>
+  </div>
+   <div class="info_section">
+    <label style="display:inline-block;font-size:17px;">Please select the Days/wk with NP or PA</label>
+    <select name="select" style="margin-top:10px;">
+      <option value="0"> 0 </option> 
+      <option value="1"> 1 </option> 
+      <option value="2"> 2 </option> 
+      <option value="3"> 3 </option>
+      <option value="4"> 4 </option> 
+      <option value="5"> 5 </option> 
+      <option value="5+"> 5+ </option>  
+      <option value="7"> 7 </option> 
+      <option value="4-5"> 1-5 </option> 
+      <option value="2-3"> 2-3 </option> 
+      <option value="2-5"> 2-5 </option> 
+      <option value="3-5"> 3-5 </option> 
+      <option value="6-7"> 6-7 </option> 
+    </select>
+  </div>
+    <div class="info_section">
+    <label style="display:inline-block;font-size:17px;">Please select the RN covered hours</label>
+    <select name="select" style="margin-top:10px;">
+      <option value="7"> 7 </option> 
+      <option value="8/7"> 8/7 </option>
+      <option value="16/7"> 16/7 </option> 
+      <option value="24/7"> 24/7 </option> 
+      <option value="N/A"> N/A</option>
+      
+    </select>
+  </div>
+   <div class="info_section">
+    <label style="display:inline-block;font-size:17px;">Please select if the advanced CPR is required</label>
+    <select name="select" style="margin-top:10px;">
+      <option value="yes"> yes </option> 
+      <option value="No" selected>No</option>
+    </select>
+  </div>
+  </div>
+<!--end of the wrapper-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+</body>
+</html>
+
+

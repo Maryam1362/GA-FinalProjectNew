@@ -1,0 +1,188 @@
+<!Doctype>
+
+ <html ng-app>
+<head>
+	<title></title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+
+ <div class="container"  ng-controller="AppCtrl">
+
+  
+    <h2> Case Mangement Reference Guide</h2>
+
+      <div class="info_section">
+    <label style="display:inline-block;font-size:17px;">Facility Name</label>
+    <input type="text" ng-model="facility.name"></iput>
+    </select>
+  </div>
+    <div class="info_section">
+    <label style="display:inline-block;font-size:17px;">Payer</label>
+    <select name="select" style="margin-top:10px;" ng-model="facility.Payer">
+      <option value="Medicare"> Medicare </option> 
+      <option value="Medicaid">Medicaid</option>
+      <option value="Aetna">Aetna</option>
+      <option value="Anthem">Anthem</option>
+      <option value="BDBS">BDBS</option>
+      <option value="Carefirst">Carefirst</option>
+      <option value="Cigna">Cigna</option>
+      <option value="Humana">Humana</option>
+      <option value="Innovation health">Innovation health</option>
+      <option value="Kaiser"> Kaiser</option>
+      <option value="Tricare">Tricare</option>
+      <option value="United">United </option>
+      <option value="Medicaid Pending">Medicaid Pending</option>
+    </select>
+  </div>
+  <div class="info_section">
+    <label style="display:inline-block;font-size:17px;">Type of Adminssions</label>
+    <select name="admissions" style="margin-top:10px;" ng-model="facility.Admissions">
+      <option value="Admit 24/h"> Admit 24/h </option> 
+      <option value="Admit from ER" selected>Admit from ER</option>
+      <option value="Admit prior to auth">Admit prior to auth</option>
+      <option value="Epic Care Link">Epic Care Link</option>
+    </select>
+  </div>
+  <div class="info_section">
+    <label for ="Paitent_weight" style="display:inline-block;font-size:17px;">Patient Weight Limit</label>
+    <input name="Paitent_weight" placeholder="Weight Limit" ng-model="facility.weightlimit">
+  </div>
+   <div class="info_section">
+    <label for ="memoryCare_unit" style="display:inline-block;font-size:17px;">Number of care units</label>
+    <input name="memoryCare_unit" placeholder="care units" ng-model="facility.Beds">
+  </div>
+  
+  <div class="info_section">
+    <label style="display:inline-block;font-size:17px;">Bed type</label>
+  
+   <select name="select" style="margin-top:10px;" ng-model="facility.BedType">
+      <option value="Specialty Beds/Mattresses "> Specialty Beds/Mattresses  </option> 
+      <option value="Contact isolation beds" selected>Contact isolation beds</option>
+      <option value="IP Hospice Beds">IP Hospice Beds</option>
+    </select>
+
+  </div>
+
+    <div class="info_section">
+    <label style="display:inline-block;font-size:17px;">Contracts type</label>
+    <select name="select" style="margin-top:10px;" ng-model="facility.Contracts">
+      <option value="SCM"> SCM </option> 
+      <option value="Bundle" selected>Bundle</option>
+    </select>
+  </div>
+  <div class="info_section">
+    <label style="display:inline-block;font-size:17px;">Days/wk with MD</label>
+    <select name="select" style="margin-top:10px;" ng-model="facility.DayswithMD">
+      <option value="2"> 2 </option> 
+      <option value="3"> 3 </option> 
+      <option value="4"> 4 </option>
+      <option value="4+	"> 4+ </option>  
+      <option value="4-5"> 1-5 </option> 
+      <option value="3-5"> 3-5 </option> 
+      <option value="4-5"> 4-5 </option> 
+      <option value="5-6"> 5-6 </option> 
+      <option value="6-7"> 6-7 </option> 
+      <option value="5"> 5 </option> 
+      <option value="6"> 6 </option> 
+      <option value="7"> 7 </option> 
+      <option value="PRN"> PRN </option> 
+    </select>
+  </div>
+   <div class="info_section">
+    <label style="display:inline-block;font-size:17px;">Days/wk with NP or PA</label>
+    <select name="select" style="margin-top:10px;" ng-model="facility.DayswithNP">
+      <option value="0"> 0 </option> 
+      <option value="1"> 1 </option> 
+      <option value="2"> 2 </option> 
+      <option value="3"> 3 </option>
+      <option value="4"> 4 </option> 
+      <option value="5"> 5 </option> 
+      <option value="5+"> 5+ </option>  
+      <option value="7"> 7 </option> 
+      <option value="4-5"> 1-5 </option> 
+      <option value="2-3"> 2-3 </option> 
+      <option value="2-5"> 2-5 </option> 
+      <option value="3-5"> 3-5 </option> 
+      <option value="6-7"> 6-7 </option> 
+    </select>
+  </div>
+    <div class="info_section">
+    <label style="display:inline-block;font-size:17px;">RN covered hours</label>
+    <select name="select" style="margin-top:10px;" ng-model="facility.CoveredHours">
+      <option value="7"> 7 </option> 
+      <option value="8/7"> 8/7 </option>
+      <option value="16/7"> 16/7 </option> 
+      <option value="24/7"> 24/7 </option> 
+      <option value="N/A"> N/A</option>
+      
+    </select>	
+  </div>
+   <div class="info_section">
+    <label style="display:inline-block;font-size:17px;">Select if the advanced CPR is required</label>
+    <select name="select" style="margin-top:10px;" ng-model="facility.AdvancedCPR">
+      <option value="yes"> yes </option> 
+      <option value="No" selected>No</option>
+    </select>
+  </div>
+ 
+
+<table class="table">
+      
+   
+      
+      <tbody>
+        <tr>
+        
+          <td><button class="btn btn-primary" ng-click="addFacility()">Add Contact</button></td>
+          <td><button class="btn btn-info" ng-click="update()">Update</button></td>
+          <td><button class="btn btn-info" ng-click="deselect()">Clear</button></td>
+        </tr>
+          <tr>
+          <td>Facility Name</td>         
+          <td>Payer</td>
+          <td>Admissions</td>
+          <td>Patient Weight</td>
+          <td>Care Units</td>
+          <td>Bed Type</td>
+          <td>Contracts Type</td>
+          <td>Contracts Type</td>
+          <td>Days/wk with MD</td>
+          <td>Days/wk with NP/PA</td>
+          <td>RN Covered Hours</td>
+          <td>Advanced CPR</td>
+        </tr>
+        <tr ng-repeat= "facility in CMP">
+          <td>{{facility.name}}</td>
+          <td>{{facility.Payer}}</td>
+          <td>{{facility.Admissions}}</td>
+          <td>{{facility.weightlimit}}</td>
+          <td>{{facility.Beds}}</td>
+          <td>{{facility.BedType}}</td>
+          <td>{{facility.Contracts}}</td>
+          <td>{{facility.DayswithMD}}</td>
+          <td>{{facility.DayswithNP}}</td>
+          <td>{{facility.CoveredHours}}</td>
+          <td>{{facility.AdvancedCPR}}</td>
+          <td><button class="btn btn-danger" ng-click="remove(facility._id)">Remove</button></td>
+          <td><button class="btn btn-warning" ng-click="edit(facility._id)">Edit</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+<script src="js/controllers/controller.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</body>
+</html>
