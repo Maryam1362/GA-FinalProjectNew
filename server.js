@@ -23,11 +23,34 @@ app.get('/data',function(req,res){
     res.json(docs);
 	});
 });
+
 app.post('/data',function(req,res){
 	db.CMP.insert(req.body,function(err,doc){
 	res.json(doc);
 	});
 });
+
+app.post('/search',function(req,res){
+	console.log("search is working");
+ 	var searchQuery = {};
+ 	if (!(req.body._id === "" || req.body._id === undefined || req.body._id === null)) {
+ 		searchQuery._id = mongojs.ObjectId(req.body._id);
+ 	}	
+
+ 	if (!(req.body.name === "" || req.body.name === undefined || req.body.name === null)) {
+ 		searchQuery.name = req.body.name;
+ 	}
+
+ 	if (!(req.body.Payer === "" || req.body.Payer === undefined || req.body.Payer === null)) {
+ 		searchQuery.Payer = req.body.Payer;
+ 	}		
+
+	db.CMP.find(searchQuery,function(err,doc){
+		res.json(doc);
+	});
+
+});
+
 app.delete('/data/:id',function(req,res){
  	var id = req.params.id;
  	console.log(id);

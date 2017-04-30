@@ -111,27 +111,30 @@
     </select>
   </div>
  
+<!-- TODO  serach button.
+have the list of results
+-->
 
 <table class="table">
       
    
       
       <tbody>
-       
-       <!--  <tr>
-          <td>{{facility.name}}</td>
-          <td>{{facility.Payer}}</td>
-          <td>{{facility.Admissions}}</td>
-          <td>{{facility.weightlimit}}</td>
-          <td>{{facility.Beds}}</td>
-          <td>{{facility.BedType}}</td>
-          <td>{{facility.Contracts}}</td>
-          <td>{{facility.DayswithMD}}</td>
-          <td>{{facility.DayswithNP}}</td>
-          <td>{{facility.CoveredHours}}</td>
-          <td>{{facility.AdvancedCPR}}</td>
+         <tr><td><button class="btn btn-primary" ng-click="searchFacility()">Search Facility</button></td></tr>
+          <tr ng-repeat= "facility in CMP">
+            <td>{{facility.name}}</td>
+            <td>{{facility.Payer}}</td>
+            <td>{{facility.Admissions}}</td>
+            <td>{{facility.weightlimit}}</td>
+            <td>{{facility.Beds}}</td>
+            <td>{{facility.BedType}}</td>
+            <td>{{facility.Contracts}}</td>
+            <td>{{facility.DayswithMD}}</td>
+            <td>{{facility.DayswithNP}}</td>
+            <td>{{facility.CoveredHours}}</td>
+            <td>{{facility.AdvancedCPR}}</td>
          
-        </tr> -->
+        </tr>
       </tbody>
     </table>
   </div>

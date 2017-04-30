@@ -4,5 +4,5 @@ angular.module('sampleApp',
 	 'MainCtrl', 
 	 'AddCtrl', 
 	 'AddService', 
-	 'SearchCtrl', 
-	 'SearchService']);
+	 'SearchCtrl' 
+	 ]);

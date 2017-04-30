@@ -9,7 +9,8 @@ angular.module('AddService', []).factory('facilityService', ['$http', function($
     	addFacility: addFacility,
     	removeFacility: removeFacility,
     	editFacility: editFacility,
-    	updateFacility: updateFacility
+    	updateFacility: updateFacility,
+    	searchFacility: searchFacility
 	}
 
 	function load(successFunction) { 
@@ -34,6 +35,10 @@ angular.module('AddService', []).factory('facilityService', ['$http', function($
 
     function updateFacility(facility, successFunction) {
     	return $http.put('/data/' + facility._id, facility).success(successFunction);
+    }
+
+    function searchFacility(facility, successFunction) {
+    	return $http.post("/search", facility).success(successFunction);
     }
 
 }]);
