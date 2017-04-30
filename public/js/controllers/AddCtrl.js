@@ -39,8 +39,8 @@ angular.module('AddCtrl', []).controller('AddController', function($scope, facil
 		facilityService.updateFacility($scope.facility, $scope.refresh);
 	} 
 
-// $scope.deselect = function() {
-//   $scope.facility = "";
-// }
+	$scope.deselectFacility = function() {
+	  $scope.facility = "";
+	}
 
 });
