@@ -1,0 +1,31 @@
+h2, label{
+ color:#0086b3;
+}
+
+label{
+	font-size:23px;
+	width:30%;
+}
+input,select{
+	width:25%;
+	height:40px;
+}
+
+.info_section{
+	height:60px;
+}
+
+.logo{
+	font-size:22px;
+	font-family
+}
+.navbar{
+	background-color: beige;
+}
+p{
+ font-size:25px;
+ color: #337ab7;
+
+ padding-top:100px;
+ 
+}
