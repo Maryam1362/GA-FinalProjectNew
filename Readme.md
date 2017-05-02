@@ -1,4 +1,5 @@
 Overview
+
 The application that I would like to build for my final project is a Case Management App. Case Management Guide provides an easy and efficient way for hospitals to identify post-acute care facilities that suit patient’s needs upon their discharge from a hospital. It narrows down available options and enhances the communication between hospital case managers.
 
 UI Draft
