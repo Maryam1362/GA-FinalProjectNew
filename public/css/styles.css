@@ -16,16 +16,15 @@ input,select{
 }
 
 .logo{
-	font-size:22px;
-	font-family
+	font-size:23px;
 }
-.navbar{
-	background-color: beige;
-}
-p{
- font-size:25px;
- color: #337ab7;
 
- padding-top:100px;
+.jumbotron p{
+ font-size:28px;
+ color: #337ab7;
+ font-weight: bold;
  
+}
+.container{
+	width:100%;
 }

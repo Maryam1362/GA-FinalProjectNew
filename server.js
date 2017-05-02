@@ -18,21 +18,12 @@ app.use(methodOverride('X-HTTP-Method-Override')); // override with the X-HTTP-M
 app.use(express.static(__dirname + '/public')); // set the static files location /public/img will be /img for users
 
 // start app ===============================================
-// serve all asset files from necessary directories
-    // app.use("/js", express.static(__dirname + "public/app/js"));
-    // app.use("/css", express.static(__dirname + "public/app/css"));
-    // app.use("/views", express.static(__dirname + "public/app/views"));
 
-
-    // // serve index.html for all remaining routes, in order to leave routing up to angular
-    // app.all("/*", function(req, res, next) {
-    //     res.sendFile(path.join(__dirname, '/public', 'index.html'));
-    // });
 app.listen( 8081, function() {
 
-   console.log("App listening on port 8000");
+   console.log("App listening on port 8081");
+});
 
-})
 app.get('/data',function(req,res){
   db.CMP.find(function(err,docs){
     res.json(docs);
@@ -116,6 +107,10 @@ app.put('/data/:id',function(req,res){
       res.json(doc);
     }
   );
+});
+
+app.get('*', function(req, res) {
+     res.sendFile('index.html', { root: 'public'});
 });
 
 exports = module.exports = app; 						// expose app

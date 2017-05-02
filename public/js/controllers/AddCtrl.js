@@ -18,6 +18,7 @@ angular.module('AddCtrl', []).controller('AddController', function($scope, facil
 		});
 	}	
     $scope.refresh();
+    
     $scope.addFacility = function() {
     	facilityService.addFacility($scope.facility, function(response){
 	    	console.log(response);
