@@ -7,8 +7,9 @@ var mongojs = require ('mongojs');
 var db = mongojs('myuser:test@ds121171.mlab.com:21171/cmp', ['CMP'])
 var bodyParser     = require('body-parser');
 var methodOverride = require('method-override');
+var path = require('path');
+
 // configuration ===========================================	
-var port = process.env.PORT || 8081; // set our port
 // get all data/stuff of the body (POST) parameters
 app.use(bodyParser.json()); // parse application/json 
 app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json
@@ -17,16 +18,30 @@ app.use(methodOverride('X-HTTP-Method-Override')); // override with the X-HTTP-M
 app.use(express.static(__dirname + '/public')); // set the static files location /public/img will be /img for users
 
 // start app ===============================================
-app.listen(port);
+// serve all asset files from necessary directories
+    // app.use("/js", express.static(__dirname + "public/app/js"));
+    // app.use("/css", express.static(__dirname + "public/app/css"));
+    // app.use("/views", express.static(__dirname + "public/app/views"));
+
+
+    // // serve index.html for all remaining routes, in order to leave routing up to angular
+    // app.all("/*", function(req, res, next) {
+    //     res.sendFile(path.join(__dirname, '/public', 'index.html'));
+    // });
+app.listen( 8081, function() {
+
+   console.log("App listening on port 8000");
+
+})
 app.get('/data',function(req,res){
-	db.CMP.find(function(err,docs){
+  db.CMP.find(function(err,docs){
     res.json(docs);
 	});
 });
 
 app.post('/data',function(req,res){
 	db.CMP.insert(req.body,function(err,doc){
-	res.json(doc);
+	 res.json(doc);
 	});
 });
 
