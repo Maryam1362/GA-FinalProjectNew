@@ -17,8 +17,7 @@ app.use(express.static(__dirname + '/public')); // set the static files location
 // start app ===============================================
 
 app.listen( 8081, function() {
-
-   console.log("App listening on port 8081");
+  console.log("App listening on port 8081");
 });
 
 app.get('/data',function(req,res){
@@ -99,7 +98,7 @@ app.put('/data/:id',function(req,res){
 	db.CMP.findAndModify({
     query: {_id: mongojs.ObjectId(id)},
     update: {$set: {name: req.body.name, Payer: req.body.Payer, Admissions: req.body.Admissions,weightlimit: req.body.weightlimit, Beds: req.body.Beds,
-    	BedType: req.body.BedType,Contracts: req.body.Contracts,DayswithMD: req.body.DayswithMD,CoveredHours: req.body.CoveredHours,AdvancedCPR: req.body.AdvancedCPR}},
+    BedType: req.body.BedType,Contracts: req.body.Contracts,DayswithMD: req.body.DayswithMD,CoveredHours: req.body.CoveredHours,AdvancedCPR: req.body.AdvancedCPR}},
     new: true}, function (err, doc) {
       res.json(doc);
     }
@@ -107,7 +106,7 @@ app.put('/data/:id',function(req,res){
 });
 
 app.get('*', function(req, res) {
-     res.sendFile('index.html', { root: 'public'});
+  res.sendFile('index.html', { root: 'public'});
 });
 
 exports = module.exports = app; 						// expose app
