@@ -20,9 +20,9 @@ My application will be a Mean Stack app, which means it relies on the following 
 
 Features
 My application will have the following features:
-1.	form that will be submitted to my express server, I will have a route for handling this post request. Using angular controller and express server I will get the data from the client page and will post to the database and also displays it in the button of the form page….….the API will be formed in this stage….
-Searching for the matched facility
-2.	from here I will get the user input form client and using either angular filtering feature or the search feature of Mongo db, I will search in the API to find the matched data. The matched data will be displayed after the form view in the bottom of the page.
+1.Add Facility: form that will be submitted to my express server, I will have a route for handling this post request. Using angular controller and express server I will get the data from the client page and will post to the database and also displays it in the button of the form page….….the API will be formed in this stage….
+
+2.Search Facility: from here I will get the user input form client and using either angular filtering feature or the search feature of Mongo db, I will search in the API to find the matched data. The matched data will be displayed after the form view in the bottom of the page.
 
 
 My project is live in : http://findfacilityapp-env.us-west-2.elasticbeanstalk.com/
