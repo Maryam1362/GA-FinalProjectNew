@@ -27,7 +27,7 @@ Searching for the matched facility
 
 My project is live in : http://findfacilityapp-env.us-west-2.elasticbeanstalk.com/
 
-How to set it up local machine :
+How to set it up on your local machine :
 
 1. clone the repo.
 2. Run the npm install.
