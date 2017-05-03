@@ -30,8 +30,9 @@ My project is live in : http://findfacilityapp-env.us-west-2.elasticbeanstalk.co
 How to set it up on your local machine :
 
 1. clone the repo.
-2. Run the npm install.
-3. open the port 8081.
+2. Run npm install.
+3. Run nodemon server.js from command line
+4. open port 8081.
 
 
 
