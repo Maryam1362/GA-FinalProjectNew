@@ -1,29 +1,14 @@
-
- <div ng-controller="SearchController">
+<div ng-controller="SearchController">
 
   </div>
     <div class="info_section">
     <label style="display:inline-block;font-size:17px;">Payer</label>
-    <select name="select" style="margin-top:10px;" ng-model="facility.Payer">
-      <option value="Medicare"> Medicare </option> 
-      <option value="Medicaid">Medicaid</option>
-      <option value="Aetna">Aetna</option>
-      <option value="Anthem">Anthem</option>
-      <option value="BDBS">BDBS</option>
-      <option value="Carefirst">Carefirst</option>
-      <option value="Cigna">Cigna</option>
-      <option value="Humana">Humana</option>
-      <option value="Innovation health">Innovation health</option>
-      <option value="Kaiser"> Kaiser</option>
-      <option value="Tricare">Tricare</option>
-      <option value="United">United </option>
-      <option value="Medicaid Pending">Medicaid Pending</option>
-    </select>
+    <multiselect name="select" style="margin-top:10px;" ng-model="facility.Payer" options="payerOptions">
   </div>
   <div class="info_section">
     <label style="display:inline-block;font-size:17px;">Admission Type</label>
     <select name="admissions" style="margin-top:10px;" ng-model="facility.Admissions">
-      <option value="Admit 24/h"> Admit 24/h </option> 
+      <option value="Admit 24/h"> Admit 24/h </option>
       <option value="Admit from ER" selected>Admit from ER</option>
       <option value="Admit prior to auth">Admit prior to auth</option>
       <option value="Epic Care Link">Epic Care Link</option>
@@ -37,12 +22,12 @@
     <label for ="memoryCare_unit" style="display:inline-block;font-size:17px;">Number of care units</label>
     <input name="memoryCare_unit" placeholder="care units" ng-model="facility.Beds">
   </div>
-  
+
   <div class="info_section">
     <label style="display:inline-block;font-size:17px;">Bed Type</label>
-  
+
    <select name="select" style="margin-top:10px;" ng-model="facility.BedType">
-      <option value="Specialty Beds/Mattresses "> Specialty Beds/Mattresses  </option> 
+      <option value="Specialty Beds/Mattresses "> Specialty Beds/Mattresses  </option>
       <option value="Contact isolation beds" selected>Contact isolation beds</option>
       <option value="IP Hospice Beds">IP Hospice Beds</option>
     </select>
@@ -52,75 +37,75 @@
     <div class="info_section">
     <label style="display:inline-block;font-size:17px;">Contract Type</label>
     <select name="select" style="margin-top:10px;" ng-model="facility.Contracts">
-      <option value="SCM"> SCM </option> 
+      <option value="SCM"> SCM </option>
       <option value="Bundle" selected>Bundle</option>
     </select>
   </div>
   <div class="info_section">
     <label style="display:inline-block;font-size:17px;">Days/wk with MD</label>
     <select name="select" style="margin-top:10px;" ng-model="facility.DayswithMD">
-      <option value="2"> 2 </option> 
-      <option value="3"> 3 </option> 
+      <option value="2"> 2 </option>
+      <option value="3"> 3 </option>
       <option value="4"> 4 </option>
-      <option value="4+ "> 4+ </option>  
-      <option value="4-5"> 1-5 </option> 
-      <option value="3-5"> 3-5 </option> 
-      <option value="4-5"> 4-5 </option> 
-      <option value="5-6"> 5-6 </option> 
-      <option value="6-7"> 6-7 </option> 
-      <option value="5"> 5 </option> 
-      <option value="6"> 6 </option> 
-      <option value="7"> 7 </option> 
-      <option value="PRN"> PRN </option> 
+      <option value="4+ "> 4+ </option>
+      <option value="4-5"> 1-5 </option>
+      <option value="3-5"> 3-5 </option>
+      <option value="4-5"> 4-5 </option>
+      <option value="5-6"> 5-6 </option>
+      <option value="6-7"> 6-7 </option>
+      <option value="5"> 5 </option>
+      <option value="6"> 6 </option>
+      <option value="7"> 7 </option>
+      <option value="PRN"> PRN </option>
     </select>
   </div>
    <div class="info_section">
     <label style="display:inline-block;font-size:17px;">Days/wk with NP or PA</label>
     <select name="select" style="margin-top:10px;" ng-model="facility.DayswithNP">
-      <option value="0"> 0 </option> 
-      <option value="1"> 1 </option> 
-      <option value="2"> 2 </option> 
+      <option value="0"> 0 </option>
+      <option value="1"> 1 </option>
+      <option value="2"> 2 </option>
       <option value="3"> 3 </option>
-      <option value="4"> 4 </option> 
-      <option value="5"> 5 </option> 
-      <option value="5+"> 5+ </option>  
-      <option value="7"> 7 </option> 
-      <option value="4-5"> 1-5 </option> 
-      <option value="2-3"> 2-3 </option> 
-      <option value="2-5"> 2-5 </option> 
-      <option value="3-5"> 3-5 </option> 
-      <option value="6-7"> 6-7 </option> 
+      <option value="4"> 4 </option>
+      <option value="5"> 5 </option>
+      <option value="5+"> 5+ </option>
+      <option value="7"> 7 </option>
+      <option value="4-5"> 1-5 </option>
+      <option value="2-3"> 2-3 </option>
+      <option value="2-5"> 2-5 </option>
+      <option value="3-5"> 3-5 </option>
+      <option value="6-7"> 6-7 </option>
     </select>
   </div>
     <div class="info_section">
     <label style="display:inline-block;font-size:17px;">RN covered hours</label>
     <select name="select" style="margin-top:10px;" ng-model="facility.CoveredHours">
-      <option value="7"> 7 </option> 
+      <option value="7"> 7 </option>
       <option value="8/7"> 8/7 </option>
-      <option value="16/7"> 16/7 </option> 
-      <option value="24/7"> 24/7 </option> 
+      <option value="16/7"> 16/7 </option>
+      <option value="24/7"> 24/7 </option>
       <option value="N/A"> N/A</option>
-      
-    </select> 
+
+    </select>
   </div>
    <div class="info_section">
     <label style="display:inline-block;font-size:17px;">Advanced CPR is required</label>
     <select name="select" style="margin-top:10px;" ng-model="facility.AdvancedCPR">
-      <option value="yes"> yes </option> 
+      <option value="yes"> yes </option>
       <option value="No" selected>No</option>
     </select>
   </div>
- 
+
 <!-- TODO  serach button.
 have the list of results
 -->
 
 <table class="table">
-      
+
     <tbody>
          <tr><td><button class="btn btn-primary" ng-click="searchFacility()">Search Facility</button></td></tr>
           <tr>
-          <td>Facility Name</td>         
+          <td>Facility Name</td>
           <td>Payer</td>
           <td>Admissions</td>
           <td>Patient Weight</td>
@@ -145,11 +130,8 @@ have the list of results
             <td>{{facility.DayswithNP}}</td>
             <td>{{facility.CoveredHours}}</td>
             <td>{{facility.AdvancedCPR}}</td>
-         
+
         </tr>
       </tbody>
     </table>
   </div>
-
-
-

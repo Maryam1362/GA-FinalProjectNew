@@ -1,8 +1,10 @@
-angular.module('sampleApp', 
-	 ['ngRoute', 
-	 'appRoutes', 
-	 'MainCtrl', 
-	 'AddCtrl', 
-	 'AddService', 
-	 'SearchCtrl' 
+angular.module('sampleApp',
+	 ['ngRoute',
+	 'btorfs.multiselect',
+	 'appRoutes',
+	 'MainCtrl',
+	 'AddCtrl',
+	 'AddService',
+	 'ConfigService',
+	 'SearchCtrl'
 	 ]);
