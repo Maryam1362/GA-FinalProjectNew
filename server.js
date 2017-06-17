@@ -8,8 +8,8 @@ var db = mongojs('myuser:test@ds121171.mlab.com:21171/cmp', ['CMP'])
 var bodyParser     = require('body-parser');
 
 
-// configuration ===========================================	
-app.use(bodyParser.json()); // parse application/json 
+// configuration ===========================================
+app.use(bodyParser.json()); // parse application/json
 app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json
 app.use(bodyParser.urlencoded({ extended: true })); // parse application/x-www-form-urlencoded
 app.use(express.static(__dirname + '/public')); // set the static files location /public/img will be /img for users
@@ -32,20 +32,24 @@ app.post('/data',function(req,res){
 	});
 });
 
+function addToQuery(searchQuery, body, attribute) {
+  if (!(body[attribute] === "" || body[attribute] === undefined || body[attribute] === null)) {
+ 		searchQuery[attribute] = body[attribute];
+ 	}
+}
+
 app.post('/search',function(req,res){
 	console.log("search is working");
  	var searchQuery = {};
  	if (!(req.body._id === "" || req.body._id === undefined || req.body._id === null)) {
  		searchQuery._id = mongojs.ObjectId(req.body._id);
- 	}	
-
- 	if (!(req.body.name === "" || req.body.name === undefined || req.body.name === null)) {
- 		searchQuery.name = req.body.name;
  	}
 
+  addToQuery(searchQuery, req.body, "name");
+
  	if (!(req.body.Payer === "" || req.body.Payer === undefined || req.body.Payer === null)) {
- 		searchQuery.Payer = req.body.Payer;
- 	}		
+ 		searchQuery.Payer = { $all: req.body.Payer };
+ 	}
  	if (!(req.body.Admissions === "" || req.body.Admissions === undefined || req.body.Admissions === null)) {
  		searchQuery.Admissions= req.body.Admissions;
  	}
