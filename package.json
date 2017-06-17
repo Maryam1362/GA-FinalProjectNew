@@ -18,10 +18,14 @@
   "homepage": "https://github.com/Maryam1362/GA-FinalProjectNew#readme",
   "dependencies": {
     "express": "^4.15.2",
+    "mongojs": "^2.4",
+    "body-parser": "^1.17",
     "path": "^0.12.7"
   },
   "devDependencies": {
     "bootstrap-css": "^4.0.0-alpha.5",
+    "mongojs": "^2.4",
+    "body-parser": "^1.17",
     "nodemon": "^1.11.0"
   }
 }
