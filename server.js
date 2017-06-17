@@ -1,12 +1,11 @@
 
 // // modules =================================================
-var express        = require('express');
-var app            = express();
-var mongojs = require ('mongojs');
-//var db = mongojs('CMP',['CMP'])
-var db = mongojs('myuser:test@ds121171.mlab.com:21171/cmp', ['CMP'])
-var bodyParser     = require('body-parser');
-
+var express = require('express'),
+    app = express(), 
+    mongojs = require ('mongojs'),
+    secrets = require('./.secret.json'),
+    db = mongojs(secrets.db_secret, ['CMP']),
+    bodyParser = require('body-parser');
 
 // configuration ===========================================
 app.use(bodyParser.json()); // parse application/json
