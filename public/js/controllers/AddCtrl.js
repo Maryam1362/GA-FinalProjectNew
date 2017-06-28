@@ -3,6 +3,9 @@ var app = angular.module('SampleApp',['ngRoute', 'btorfs.multiselect']);
 angular.module('AddCtrl', []).controller('AddController', function($scope, facilityService, configurationService) {
 	console.log("Hello world from Controller");
 	$scope.payerOptions = configurationService.getPayer();
+	$scope.AdmissionsOptions = configurationService.getAdmissions();
+	$scope.BedOptions = configurationService.getBeds();
+	$scope.contractOptions = configurationService.getContracts();
 
 	facilityService.load(function(response){
 	    console.log("I got the data I requested.");

@@ -50,28 +50,28 @@ app.post('/search',function(req,res){
     searchQuery.Payer = { $all: req.body.Payer };
   }
   if (!(req.body.Admissions === "" || req.body.Admissions === undefined || req.body.Admissions === null)) {
-    searchQuery.Admissions= req.body.Admissions;
+    searchQuery.Admissions = {$all: req.body.Admissions}
   }
   if (!(req.body.weightlimit === "" || req.body.weightlimit === undefined || req.body.weightlimit === null)) {
-    searchQuery.weightlimit= req.body.weightlimit;
+    searchQuery.weightlimit = req.body.weightlimit;
   }
   if (!(req.body.Beds === "" || req.body.Beds === undefined || req.body.Beds === null)) {
-    searchQuery.Beds= req.body.Beds;
+    searchQuery.Beds = req.body.Beds;
   }
   if (!(req.body.BedType === "" || req.body.BedType === undefined || req.body.BedType === null)) {
-    searchQuery.BedType= req.body.BedType;
+    searchQuery.BedType = {$all: req.body.BedType};
   }
   if (!(req.body.Contracts === "" || req.body.Contracts === undefined || req.body.Contracts === null)) {
-    searchQuery.Contracts= req.body.Contracts;
+    searchQuery.Contracts = {$all: req.body.Contracts}
   }
   if (!(req.body.DayswithMD === "" || req.body.DayswithMD === undefined || req.body.DayswithMD === null)) {
-    searchQuery.DayswithMD= req.body.DayswithMD;
+    searchQuery.DayswithMD = req.body.DayswithMD;
   }
   if (!(req.body.CoveredHours === "" || req.body.CoveredHours === undefined || req.body.CoveredHours === null)) {
-    searchQuery.CoveredHours= req.body.CoveredHours;
+    searchQuery.CoveredHours = req.body.CoveredHours;
   }
   if (!(req.body.AdvancedCPR === "" || req.body.AdvancedCPR === undefined || req.body.AdvancedCPR === null)) {
-    searchQuery.AdvancedCPR= req.body.AdvancedCPR;
+    searchQuery.AdvancedCPR = req.body.AdvancedCPR;
   }
   db.CMP.find(searchQuery,function(err,doc){
     res.json(doc);

@@ -3,16 +3,24 @@ h2, label{
 }
 
 label{
-	font-size:21px;
+	font-size:19px;
 	width:25%;
+	display:block !important;
+	margin-bottom:0;
+}
+select{
+	height:30px;
+
 }
 input,select{
 	width:25%;
-	height:40px;
+}
+input{
+	height:25px;
 }
 
 .info_section{
-	height:60px;
+	margin-bottom:20px;
 }
 
 .logo{
@@ -27,4 +35,8 @@ input,select{
 }
 .container{
 	width:100%;
+}
+.dropdown-toggle{
+	width:25% !important;
+	height:30px;
 }

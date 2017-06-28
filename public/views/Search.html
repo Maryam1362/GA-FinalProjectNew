@@ -6,14 +6,14 @@
     <multiselect name="select" style="margin-top:10px;" ng-model="facility.Payer" options="payerOptions">
   </div>
   <div class="info_section">
-    <label style="display:inline-block;font-size:17px;">Admission Type</label>
-    <select name="admissions" style="margin-top:10px;" ng-model="facility.Admissions">
-      <option value="Admit 24/h"> Admit 24/h </option>
-      <option value="Admit from ER" selected>Admit from ER</option>
-      <option value="Admit prior to auth">Admit prior to auth</option>
-      <option value="Epic Care Link">Epic Care Link</option>
-    </select>
+    <label style="display:inline-block;font-size:17px;"> Admission Type</label>
+
+      <multiselect name="select" style="margin-top:10px;" ng-model="facility.Admissions" options="AdmissionsOptions">
+    </multiselect>
+   
   </div>
+
+
   <div class="info_section">
     <label for ="Paitent_weight" style="display:inline-block;font-size:17px;">Patient Weight Limit</label>
     <input name="Paitent_weight" placeholder="Weight Limit" ng-model="facility.weightlimit">
@@ -25,21 +25,15 @@
 
   <div class="info_section">
     <label style="display:inline-block;font-size:17px;">Bed Type</label>
-
-   <select name="select" style="margin-top:10px;" ng-model="facility.BedType">
-      <option value="Specialty Beds/Mattresses "> Specialty Beds/Mattresses  </option>
-      <option value="Contact isolation beds" selected>Contact isolation beds</option>
-      <option value="IP Hospice Beds">IP Hospice Beds</option>
-    </select>
+    <multiselect name="select" style="margin-top:10px;" ng-model="facility.BedType" options="BedOptions">
+    </multiselect>
 
   </div>
 
     <div class="info_section">
     <label style="display:inline-block;font-size:17px;">Contract Type</label>
-    <select name="select" style="margin-top:10px;" ng-model="facility.Contracts">
-      <option value="SCM"> SCM </option>
-      <option value="Bundle" selected>Bundle</option>
-    </select>
+     <multiselect name="select" style="margin-top:10px;" ng-model="facility.Contracts" options="contractOptions">
+    </multiselect>
   </div>
   <div class="info_section">
     <label style="display:inline-block;font-size:17px;">Days/wk with MD</label>
